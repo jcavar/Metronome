@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  Metronome
-//
-//  Created by Josip Cavar on 13.09.2024..
-//
-
 import SwiftUI
 import AVFAudio
 
