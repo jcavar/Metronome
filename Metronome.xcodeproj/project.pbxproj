@@ -331,7 +331,6 @@
 				CODE_SIGN_ENTITLEMENTS = Metronome/Metronome.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Metronome/Preview Content\"";
 				DEVELOPMENT_TEAM = QMH23H22X5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -370,7 +369,6 @@
 				CODE_SIGN_ENTITLEMENTS = Metronome/Metronome.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Metronome/Preview Content\"";
 				DEVELOPMENT_TEAM = QMH23H22X5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
