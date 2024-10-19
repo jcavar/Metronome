@@ -11,8 +11,6 @@ class Metronome: AVAudioUnitSampler {
 
     override init() {
         super.init()
-        // TODO: Extract
-        auAudioUnit.maximumFramesToRender = UInt32(10 * sampleRate)
         let preset = Bundle.main.url(forResource: "Metronome", withExtension: "aupreset")!
         try! loadPreset(at: preset)
         overallGain = 12
