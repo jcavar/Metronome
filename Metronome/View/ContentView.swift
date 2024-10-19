@@ -9,6 +9,7 @@ import SwiftUI
 import AVFAudio
 
 struct ContentView: View {
+    @State private var isPlaying: Bool = false
     let engine = AVAudioEngine()
     let metronome = Metronome()
 
@@ -17,8 +18,15 @@ struct ContentView: View {
             .onAppear {
                 engine.attach(metronome)
                 engine.connect(metronome, to: engine.mainMixerNode, format: nil)
+            }
+        Button(isPlaying ? "Stop" : "Start" ) {
+            if isPlaying {
+                engine.pause()
+            } else {
                 try! engine.start()
             }
+            isPlaying.toggle()
+        }
     }
 }
 
