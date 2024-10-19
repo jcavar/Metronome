@@ -65,7 +65,7 @@ extension AVAudioPCMBuffer {
         let half = Int((Double(height) / 2).rounded(.up))
         let waveformRows = (0..<height).map { rowIndex in
             let row = height - rowIndex
-            return "\(abs(row - half))" + String(
+            return "\(abs(row - half))│ " + String(
                 buckets.map { value in
                     let scaled = value * scaleFactor
                     let max = Int(half) + Int(scaled)
