@@ -102,9 +102,9 @@
 						<key>inverse</key>
 						<false/>
 						<key>max value</key>
-						<real>0.50800001621246338</real>
+						<real>0.5080000162124634</real>
 						<key>min value</key>
-						<real>-0.50800001621246338</real>
+						<real>-0.5080000162124634</real>
 						<key>source</key>
 						<integer>10</integer>
 						<key>transform</key>
@@ -202,7 +202,7 @@
 								<key>stage</key>
 								<integer>0</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -210,7 +210,7 @@
 								<key>stage</key>
 								<integer>1</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -218,7 +218,7 @@
 								<key>stage</key>
 								<integer>2</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -226,7 +226,7 @@
 								<key>stage</key>
 								<integer>3</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>level</key>
@@ -240,7 +240,7 @@
 								<key>stage</key>
 								<integer>5</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -327,20 +327,18 @@
 	<key>coarse tune</key>
 	<integer>0</integer>
 	<key>data</key>
-	<data>
-	AAAAAAAAAAAAAAAEAAADhAAAAAAAAAOFAAAAAAAAA4YAAAAAAAADhwAAAAA=
-	</data>
+	<data>AAAAAAAAAAAAAAAEAAADhAAAAAAAAAOFAAAAAAAAA4YAAAAAAAADhwAAAAA=</data>
 	<key>file-references</key>
 	<dict>
 		<key>Sample:268435458</key>
-		<string>/Users/josipcavar/Library/Audio/Sounds/tick.wav</string>
+		<string>/Sounds/tick.wav</string>
 		<key>Sample:268435459</key>
-		<string>/Users/josipcavar/Library/Audio/Sounds/tack.wav</string>
+		<string>/Sounds/tack.wav</string>
 	</dict>
 	<key>fine tune</key>
-	<real>0.0</real>
+	<real>0</real>
 	<key>gain</key>
-	<real>0.0</real>
+	<real>0</real>
 	<key>manufacturer</key>
 	<integer>1634758764</integer>
 	<key>name</key>
@@ -348,7 +346,7 @@
 	<key>output</key>
 	<integer>0</integer>
 	<key>pan</key>
-	<real>0.0</real>
+	<real>0</real>
 	<key>subtype</key>
 	<integer>1935764848</integer>
 	<key>type</key>

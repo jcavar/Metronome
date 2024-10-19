@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA6D65552CC42586006756E1 /* AVAudioPCMBufferExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6D654B2CC42586006756E1 /* AVAudioPCMBufferExtensions.swift */; };
+		FA6D65562CC42586006756E1 /* Metronome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6D654C2CC42586006756E1 /* Metronome.swift */; };
+		FA6D65572CC42586006756E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6D654E2CC42586006756E1 /* ContentView.swift */; };
+		FA6D65582CC42586006756E1 /* MetronomeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6D654F2CC42586006756E1 /* MetronomeApp.swift */; };
+		FA6D65592CC42586006756E1 /* WaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6D65502CC42586006756E1 /* WaveformView.swift */; };
+		FA6D655A2CC42586006756E1 /* Metronome.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = FA6D65482CC42586006756E1 /* Metronome.aupreset */; };
+		FA6D655B2CC42586006756E1 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = FA6D65492CC42586006756E1 /* Sounds */; };
+		FA6D655C2CC42586006756E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA6D65522CC42586006756E1 /* Assets.xcassets */; };
 		FAF12F7F2C94668600876A92 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = FAF12F7E2C94668600876A92 /* SnapshotTesting */; };
 /* End PBXBuildFile section */
 
@@ -21,16 +29,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA6D65482CC42586006756E1 /* Metronome.aupreset */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Metronome.aupreset; sourceTree = "<group>"; };
+		FA6D65492CC42586006756E1 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
+		FA6D654B2CC42586006756E1 /* AVAudioPCMBufferExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVAudioPCMBufferExtensions.swift; sourceTree = "<group>"; };
+		FA6D654C2CC42586006756E1 /* Metronome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metronome.swift; sourceTree = "<group>"; };
+		FA6D654E2CC42586006756E1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FA6D654F2CC42586006756E1 /* MetronomeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeApp.swift; sourceTree = "<group>"; };
+		FA6D65502CC42586006756E1 /* WaveformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformView.swift; sourceTree = "<group>"; };
+		FA6D65522CC42586006756E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA6D65532CC42586006756E1 /* Metronome.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Metronome.entitlements; sourceTree = "<group>"; };
 		FAF12F4B2C9455F900876A92 /* Metronome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metronome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF12F5C2C9455FA00876A92 /* MetronomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetronomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		FAF12F4D2C9455F900876A92 /* Metronome */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Metronome;
-			sourceTree = "<group>";
-		};
 		FAF12F5F2C9455FA00876A92 /* MetronomeTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = MetronomeTests;
@@ -57,10 +69,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA6D654A2CC42586006756E1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA6D65482CC42586006756E1 /* Metronome.aupreset */,
+				FA6D65492CC42586006756E1 /* Sounds */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FA6D654D2CC42586006756E1 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				FA6D654A2CC42586006756E1 /* Resources */,
+				FA6D654B2CC42586006756E1 /* AVAudioPCMBufferExtensions.swift */,
+				FA6D654C2CC42586006756E1 /* Metronome.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		FA6D65512CC42586006756E1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA6D654E2CC42586006756E1 /* ContentView.swift */,
+				FA6D654F2CC42586006756E1 /* MetronomeApp.swift */,
+				FA6D65502CC42586006756E1 /* WaveformView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA6D65542CC42586006756E1 /* Metronome */ = {
+			isa = PBXGroup;
+			children = (
+				FA6D654D2CC42586006756E1 /* Audio */,
+				FA6D65512CC42586006756E1 /* View */,
+				FA6D65522CC42586006756E1 /* Assets.xcassets */,
+				FA6D65532CC42586006756E1 /* Metronome.entitlements */,
+			);
+			path = Metronome;
+			sourceTree = "<group>";
+		};
 		FAF12F422C9455F900876A92 = {
 			isa = PBXGroup;
 			children = (
-				FAF12F4D2C9455F900876A92 /* Metronome */,
+				FA6D65542CC42586006756E1 /* Metronome */,
 				FAF12F5F2C9455FA00876A92 /* MetronomeTests */,
 				FAF12F4C2C9455F900876A92 /* Products */,
 			);
@@ -89,9 +141,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				FAF12F4D2C9455F900876A92 /* Metronome */,
 			);
 			name = Metronome;
 			packageProductDependencies = (
@@ -171,6 +220,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA6D655A2CC42586006756E1 /* Metronome.aupreset in Resources */,
+				FA6D655B2CC42586006756E1 /* Sounds in Resources */,
+				FA6D655C2CC42586006756E1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +240,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA6D65552CC42586006756E1 /* AVAudioPCMBufferExtensions.swift in Sources */,
+				FA6D65562CC42586006756E1 /* Metronome.swift in Sources */,
+				FA6D65572CC42586006756E1 /* ContentView.swift in Sources */,
+				FA6D65582CC42586006756E1 /* MetronomeApp.swift in Sources */,
+				FA6D65592CC42586006756E1 /* WaveformView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
