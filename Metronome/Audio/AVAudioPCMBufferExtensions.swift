@@ -79,7 +79,7 @@ extension AVAudioPCMBuffer {
                 }
             )
         }
-        return (rows + waveformRows).joined(separator: "\n")
+        return (rows + [""] + waveformRows + [""]).joined(separator: "\n")
     }
 
     @objc func debugQuickLookObject() -> Any? {
