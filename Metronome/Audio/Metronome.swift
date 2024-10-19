@@ -26,8 +26,7 @@ class Metronome: AVAudioUnitSampler {
             process(
                 timeStamp: timeStamp.pointee,
                 frameCount: frameCount,
-                midiBlock: midiBlock,
-                message: message
+                scheduleMIDI: { midiBlock($0, 0, 3, message) }
             )
         }
     }
@@ -41,16 +40,15 @@ class Metronome: AVAudioUnitSampler {
 func process(
     timeStamp: AudioTimeStamp,
     frameCount: AUAudioFrameCount,
-    midiBlock: AUScheduleMIDIEventBlock,
-    message: UnsafePointer<UInt8>
+    scheduleMIDI: (AUEventSampleTime) -> Void
 ) {
-    let start = Int64(timeStamp.mSampleTime)
-    let end = start + Int64(frameCount)
-    let tickStart = Int(Double(start) / sampleRate)
-    let tickEnd = Int(Double(end) / sampleRate)
-    guard tickEnd > tickStart else { return }
-    for tick in tickStart...tickEnd {
-        let position = (Int64(Double(tick) * Double(sampleRate))) - start
-        midiBlock(position, 0, 3, message)
+    let bufferStart = Int64(timeStamp.mSampleTime)
+    let bufferEnd = bufferStart + Int64(frameCount)
+
+    for sampleTime in bufferStart...bufferEnd {
+        if sampleTime.isMultiple(of: Int64(sampleRate)) {
+            let position = sampleTime - bufferStart
+            scheduleMIDI(position)
+        }
     }
 }
