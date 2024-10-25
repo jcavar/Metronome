@@ -22,13 +22,21 @@ extension Snapshotting where Format == String, Value == AVAudioPCMBuffer {
 }
 
 extension Snapshotting where Format == NSImage, Value == AVAudioPCMBuffer {
-    static func bufferImage(width: Int, height: Int) -> Snapshotting {
+    static func bufferImage<Overlay: View>(width: Int, height: Int, overlay: Overlay?) -> Snapshotting {
         Snapshotting<NSView, NSImage>.image(size: .init(width: width, height: height))
             .pullback { buffer in
                 let (buckets, max) = buffer.reduce(bucketCount: width)
                 let data = buckets.enumerated().map(Bucket.init)
-                let waveform = WaveformView(buckets: data, absMax: max)
-                return NSHostingView(rootView: waveform)
+                let waveform = WaveformView(buckets: data, absMax: max, height: CGFloat(height))
+                if let overlay {
+                    return NSHostingView(rootView: waveform.overlay(overlay))
+                } else {
+                    return NSHostingView(rootView: waveform)
+                }
             }
+    }
+
+    static func bufferImage(width: Int, height: Int) -> Snapshotting {
+        .bufferImage(width: width, height: height, overlay: Optional<EmptyView>.none)
     }
 }
