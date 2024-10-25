@@ -52,9 +52,9 @@ extension AVAudioPCMBuffer {
     func visualDescription(width: Int = 60, height: Int = 15) -> String {
         assert((height - 1).isMultiple(of: 2))
         let rows = [
-            "Format \(self.format)",
-            "Frame count \(self.frameLength)",
-            "Frame capacity \(self.frameCapacity)"
+            "Format \(format.channelCount) ch, \(format.sampleRate) Hz, \(format.isInterleaved ? "interleaved" : "deinterleaved"), \(format.commonFormat.stringDescription)",
+            "Frame count \(frameLength)",
+            "Frame capacity \(frameCapacity)"
         ]
         let frameCount = Int(self.frameLength)
         guard let channelData = self.floatChannelData, frameCount > 0 else {
@@ -84,5 +84,18 @@ extension AVAudioPCMBuffer {
 
     @objc func debugQuickLookObject() -> Any? {
         visualDescription()
+    }
+}
+
+private extension AVAudioCommonFormat {
+    var stringDescription: String {
+        switch self {
+        case .otherFormat: "Other format"
+        case .pcmFormatFloat32: "Float32"
+        case .pcmFormatFloat64: "Float64"
+        case .pcmFormatInt16: "Int16"
+        case .pcmFormatInt32: "Int32"
+        @unknown default: "Unknown"
+        }
     }
 }
