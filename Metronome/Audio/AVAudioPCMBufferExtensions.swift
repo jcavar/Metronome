@@ -6,13 +6,13 @@ extension AVAudioPCMBuffer {
         guard let channelData = self.floatChannelData, frameCount > 0 else { return ([], 0) }
         // TODO: Assuming mono
         let samples = Array(UnsafeBufferPointer(start: channelData[0], count: frameCount))
-        let samplesPerBucket = max(1, frameCount / bucketCount)
+        let samplesPerBucket = max(1, Double(frameCount) / Double(bucketCount))
 
         var buckets = [Float](repeating: 0, count: bucketCount)
         var maxBucket: Float = 0
         for i in 0..<bucketCount {
-            let bucketStart = i * samplesPerBucket
-            let bucketEnd = min((i + 1) * samplesPerBucket, frameCount)
+            let bucketStart = Int(Double(i) * samplesPerBucket)
+            let bucketEnd = min(bucketStart + Int(samplesPerBucket), frameCount)
             let bucketSamples = samples[bucketStart..<bucketEnd]
             let avgSample = bucketSamples.reduce(into: Float(0)) { partialResult, value in
                 if abs(value) > abs(partialResult) {

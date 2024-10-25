@@ -37,7 +37,7 @@ class Metronome: AVAudioUnitSampler {
 }
 
 // @_noLocks
-func process(
+private func process(
     timeStamp: AudioTimeStamp,
     frameCount: AUAudioFrameCount,
     scheduleMIDI: (AUEventSampleTime) -> Void
