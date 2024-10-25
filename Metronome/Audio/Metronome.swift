@@ -48,7 +48,7 @@ private func process(
     for sampleTime in bufferStart...bufferEnd {
         if sampleTime.isMultiple(of: Int64(sampleRate)) {
             let position = sampleTime - bufferStart
-            scheduleMIDI(position)
+            scheduleMIDI(AUEventSampleTimeImmediate + position)
         }
     }
 }
