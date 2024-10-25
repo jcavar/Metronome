@@ -29,9 +29,9 @@ extension Snapshotting where Format == NSImage, Value == AVAudioPCMBuffer {
                 let data = buckets.enumerated().map(Bucket.init)
                 let waveform = WaveformView(buckets: data, absMax: max, height: CGFloat(height))
                 if let overlay {
-                    return NSHostingView(rootView: waveform.overlay(overlay))
+                    return NSHostingView(rootView: waveform.overlay(overlay).environment(\.colorScheme, .light))
                 } else {
-                    return NSHostingView(rootView: waveform)
+                    return NSHostingView(rootView: waveform.environment(\.colorScheme, .light))
                 }
             }
     }
