@@ -15,6 +15,8 @@
 		FA6D655A2CC42586006756E1 /* Metronome.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = FA6D65482CC42586006756E1 /* Metronome.aupreset */; };
 		FA6D655B2CC42586006756E1 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = FA6D65492CC42586006756E1 /* Sounds */; };
 		FA6D655C2CC42586006756E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA6D65522CC42586006756E1 /* Assets.xcassets */; };
+		FA6D65602CC42A44006756E1 /* CountIn.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = FA6D655F2CC42A44006756E1 /* CountIn.aupreset */; };
+		FA6D65622CC42B21006756E1 /* CountIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6D65612CC42B1F006756E1 /* CountIn.swift */; };
 		FAF12F7F2C94668600876A92 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = FAF12F7E2C94668600876A92 /* SnapshotTesting */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +40,8 @@
 		FA6D65502CC42586006756E1 /* WaveformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformView.swift; sourceTree = "<group>"; };
 		FA6D65522CC42586006756E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA6D65532CC42586006756E1 /* Metronome.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Metronome.entitlements; sourceTree = "<group>"; };
+		FA6D655F2CC42A44006756E1 /* CountIn.aupreset */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CountIn.aupreset; sourceTree = "<group>"; };
+		FA6D65612CC42B1F006756E1 /* CountIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountIn.swift; sourceTree = "<group>"; };
 		FAF12F4B2C9455F900876A92 /* Metronome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metronome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF12F5C2C9455FA00876A92 /* MetronomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetronomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -72,6 +76,7 @@
 		FA6D654A2CC42586006756E1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FA6D655F2CC42A44006756E1 /* CountIn.aupreset */,
 				FA6D65482CC42586006756E1 /* Metronome.aupreset */,
 				FA6D65492CC42586006756E1 /* Sounds */,
 			);
@@ -81,6 +86,7 @@
 		FA6D654D2CC42586006756E1 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				FA6D65612CC42B1F006756E1 /* CountIn.swift */,
 				FA6D654A2CC42586006756E1 /* Resources */,
 				FA6D654B2CC42586006756E1 /* AVAudioPCMBufferExtensions.swift */,
 				FA6D654C2CC42586006756E1 /* Metronome.swift */,
@@ -223,6 +229,7 @@
 				FA6D655A2CC42586006756E1 /* Metronome.aupreset in Resources */,
 				FA6D655B2CC42586006756E1 /* Sounds in Resources */,
 				FA6D655C2CC42586006756E1 /* Assets.xcassets in Resources */,
+				FA6D65602CC42A44006756E1 /* CountIn.aupreset in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA6D65622CC42B21006756E1 /* CountIn.swift in Sources */,
 				FA6D65552CC42586006756E1 /* AVAudioPCMBufferExtensions.swift in Sources */,
 				FA6D65562CC42586006756E1 /* Metronome.swift in Sources */,
 				FA6D65572CC42586006756E1 /* ContentView.swift in Sources */,
