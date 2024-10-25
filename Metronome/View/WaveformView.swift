@@ -17,7 +17,7 @@ struct WaveformView: View {
     }
 
     var body: some View {
-        HStack(spacing: 1) {
+        HStack(spacing: 0) {
             ForEach(buckets) { bucket in
                 let height = absMax > 0 ? (CGFloat(abs(bucket.max)) / CGFloat(absMax)) * 500 : 0
                 Color.red.frame(width: 1, height: height)
