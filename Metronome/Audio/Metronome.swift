@@ -23,7 +23,7 @@ class Metronome: AVAudioUnitSampler {
         let midiBlock = auAudioUnit.scheduleMIDIEventBlock!
         token = auAudioUnit.token { flags, timeStamp, frameCount, bus in
             guard flags == .unitRenderAction_PreRender else { return }
-            process(
+            processOptimised(
                 timeStamp: timeStamp.pointee,
                 frameCount: frameCount,
                 scheduleMIDI: { midiBlock($0, 0, 3, message) }
@@ -36,7 +36,6 @@ class Metronome: AVAudioUnitSampler {
     }
 }
 
-// @_noLocks
 private func process(
     timeStamp: AudioTimeStamp,
     frameCount: AUAudioFrameCount,
@@ -51,4 +50,22 @@ private func process(
             scheduleMIDI(AUEventSampleTimeImmediate + position)
         }
     }
+}
+
+var previous: Int64 = -1
+
+private func processOptimised(
+    timeStamp: AudioTimeStamp,
+    frameCount: AUAudioFrameCount,
+    scheduleMIDI: (AUEventSampleTime) -> Void
+) {
+    let bufferStart = Int64(timeStamp.mSampleTime)
+    let bufferEnd = bufferStart + Int64(frameCount)
+
+    let (quotientEnd, remainderEnd) = bufferEnd.quotientAndRemainder(dividingBy: Int64(sampleRate))
+
+    guard quotientEnd > previous else { return }
+    let position = Int64(frameCount) - remainderEnd
+    scheduleMIDI(AUEventSampleTimeImmediate + position)
+    previous = quotientEnd
 }
