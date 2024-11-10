@@ -16,12 +16,14 @@ A presentation given at ADC 2024 conference
 - [Using ASCII waveforms to test real-time audio code](https://goq2q.net/blog/tech/using-ascii-waveforms-to-test-real-time-audio-code)
 - [Characterization test](https://en.wikipedia.org/wiki/Characterization_test)
 - [Surviving Legacy Code with Golden Master and Sampling](https://blog.thecodewhisperer.com/permalink/surviving-legacy-code-with-golden-master-and-sampling)
+- [Snapshot Testing Neural Networks](https://xd009642.github.io/2024/08/23/snapshot-testing-neural-networks.html)
 - [My blog](https://infinum.com/blog/author/josipcavar/)
 
 ### Libraries
 
 - [Swift Snapshot Testing](https://github.com/pointfreeco/swift-snapshot-testing) - A library I've been using in my work (and in the presentation)
 - [Approval Tests](https://approvaltests.com) - A project dedicated to approval testing. You can find a link to implementation in for many programming languages
+- [Insta Snapshots](https://insta.rs/) - Insta is an enjoyable snapshot testing tool for Rust
 
 ### Previous ADC talks
 
