@@ -4,7 +4,9 @@
 
 A presentation given at ADC 2024 conference
 
-## Presentation
+## Presentation and talk
+
+[Video recording](https://www.youtube.com/watch?v=Y1n6bgkjSk0)
 
 [snapshot-testing-audio-dsp.pdf](https://github.com/user-attachments/files/17688832/snapshot-testing-audio-dsp.pdf)
 
