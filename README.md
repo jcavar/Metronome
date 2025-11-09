@@ -19,7 +19,7 @@ A presentation given at ADC 2024 conference
 - [Characterization test](https://en.wikipedia.org/wiki/Characterization_test)
 - [Surviving Legacy Code with Golden Master and Sampling](https://blog.thecodewhisperer.com/permalink/surviving-legacy-code-with-golden-master-and-sampling)
 - [Snapshot Testing Neural Networks](https://xd009642.github.io/2024/08/23/snapshot-testing-neural-networks.html)
-- [My blog](https://infinum.com/blog/author/josipcavar/)
+- [My blog](https://infinum.com/blog/author/josip-cavar)
 
 ### Libraries
 
